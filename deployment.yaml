@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-python1-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello1-python
+  template:
+    metadata:
+      labels:
+        app: hello1-python
+    spec:
+      containers:
+      - name: hello-python
+        image: devopspk93/kube9:v1
+        ports:
+        - containerPort: 5000
+
