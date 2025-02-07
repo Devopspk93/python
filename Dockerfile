@@ -11,10 +11,10 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 # Copy the rest of the application code into the container
-COPY . .
+COPY /app
 
 # Expose port 5000 for the application
-EXPOSE 5000
+#EXPOSE 5000
 
 # Define the command to run the application
 CMD ["python", "app.py"]
