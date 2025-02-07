@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: hello-python
-        image: devopspk93/kube9:v1
+        image: devopspk93/python-app:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
 
